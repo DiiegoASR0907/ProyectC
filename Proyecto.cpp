@@ -40,21 +40,38 @@ int main()
 	utilidadu = pventau - costou;
 	utilidadt = pventat - costot;
 
-		if (costou <= 30000)
-		{
-			tipo = "A";
-			porcentajeu = costou / (costou * 1.5);
-		}
-		else if(costou > 30000 && costou <= 60000)
-		{
-			tipo = "B";
-			porcentajeu = costou / (costou * 1.4);
-		}
-		else
-		{
-			tipo = "C";
-			porcentajeu = costou / (costou * 1.3);
-		}
+	switch (costou)
+	{
+	case <= 30000:
+		tipo = "A";
+		porcentajeu = costou / (costou * 1.5);
+		break;
+	case > 30000 && <= 60000:
+		tipo = "B";
+		porcentajeu = costou / (costou * 1.4);
+		break;
+	case > 60000:
+		tipo = "C";
+		porcentajeu = costou / (costou * 1.3);
+		break;
+	default:
+		break;
+	}
+		//if (costou <= 30000)
+		//{
+		//	tipo = "A";
+		//	porcentajeu = costou / (costou * 1.5);
+		//}
+		//else if(costou > 30000 && costou <= 60000)
+		//{
+		//	tipo = "B";
+		//	porcentajeu = costou / (costou * 1.4);
+		//}
+		//else
+		//{
+		//	tipo = "C";
+		//	porcentajeu = costou / (costou * 1.3);
+		//}
 
 
 	cout << "LOS DATOS REGISTRADOS SON LOS SIGUIENTES" << endl;
