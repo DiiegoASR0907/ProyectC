@@ -14,6 +14,7 @@ int pventat;
 int utilidadu;
 int utilidadt;
 int porcentajeu;
+string tipo;
 
 
 int main()
@@ -38,7 +39,23 @@ int main()
 	pventat = qzapato * pventau;
 	utilidadu = pventau - costou;
 	utilidadt = pventat - costot;
-	porcentajeu = utilidadt / costot
+
+		if (costou <= 30000)
+		{
+			tipo = "A";
+			porcentajeu = costou / (costou * 1.5);
+		}
+		else if(costou > 30000 && costou <= 60000)
+		{
+			tipo = "B";
+			porcentajeu = costou / (costou * 1.4);
+		}
+		else
+		{
+			tipo = "C";
+			porcentajeu = costou / (costou * 1.3);
+		}
+
 
 	cout << "LOS DATOS REGISTRADOS SON LOS SIGUIENTES" << endl;
 	// salida final de datos organizados
