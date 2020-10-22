@@ -16,47 +16,53 @@ int utilidadt;
 int porcentajeu;
 string tipo;
 
+string decision;
 
 int main()
 {
 	cout << "ADMINISTRAR VENTA DE ZAPATOS" << endl;
-	// ingreso de datos y operaciones matematicas
-	cout << "Digite la referencia del zapato..." << endl;
-	cin >> referencia;
-	cout << "Digite una descripcion del zapato..." << endl;
-	cin >> descripcion;
-	cout << "Digite la talla..." << endl;
-	cin >> talla;
-	cout << "Digite la letra si esta disponible o no para la venta S/N..." << endl;
-	cin >> letra;
-	cout << "Digite la cantidad de pares de zapatos..." << endl;
-	cin >> qzapato;
-	cout << "Digite el costo cada par de zapatos..." << endl;
-	cin >> costou;
-	costot = qzapato * costou;
-	cout << "Digite el precio de venta del zapato..." << endl;
-	cin >> pventau;
-	pventat = qzapato * pventau;
-	utilidadu = pventau - costou;
-	utilidadt = pventat - costot;
-
-	switch (costou)
+	cout << "DESEA REGISTRAR UN ZAPATO s/n" << endl;
+	cin >> decision;
+	while (decision = "s")
 	{
-	case <= 30000:
-		tipo = "A";
-		porcentajeu = costou / (costou * 1.5);
+		cout << "ADMINISTRAR VENTA DE ZAPATOS" << endl;
+		// ingreso de datos y operaciones matematicas
+		cout << "Digite la referencia del zapato..." << endl;
+		cin >> referencia;
+		cout << "Digite una descripcion del zapato..." << endl;
+		cin >> descripcion;
+		cout << "Digite la talla..." << endl;
+		cin >> talla;
+		cout << "Digite la letra si esta disponible o no para la venta S/N..." << endl;
+		cin >> letra;
+		cout << "Digite la cantidad de pares de zapatos..." << endl;
+		cin >> qzapato;
+		cout << "Digite el costo cada par de zapatos..." << endl;
+		cin >> costou;
+		cout << "Digite el precio de venta del zapato..." << endl;
+		cin >> pventau;
+		costot = qzapato * costou;
+		pventat = qzapato * pventau;
+		utilidadu = pventau - costou;
+		utilidadt = pventat - costot;
+
+		switch (costou)
+		{
+		case <= 30000:
+			tipo = "A";
+			porcentajeu = costou / (costou * 1.5);
+			break;
+		case > 30000 && <= 60000:
+			tipo = "B";
+			porcentajeu = costou / (costou * 1.4);
+			break;
+		case > 60000:
+			tipo = "C";
+			porcentajeu = costou / (costou * 1.3);
 		break;
-	case > 30000 && <= 60000:
-		tipo = "B";
-		porcentajeu = costou / (costou * 1.4);
+		default:
 		break;
-	case > 60000:
-		tipo = "C";
-		porcentajeu = costou / (costou * 1.3);
-		break;
-	default:
-		break;
-	}
+		}
 		//if (costou <= 30000)
 		//{
 		//	tipo = "A";
@@ -73,23 +79,25 @@ int main()
 		//	porcentajeu = costou / (costou * 1.3);
 		//}
 
+		cout << "LOS DATOS REGISTRADOS SON LOS SIGUIENTES" << endl;
+		// salida final de datos organizados
+		cout << "REFERENCIA: " << referencia << endl;
+		cout << "DESCRIPCION: " << descripcion << endl;
+		cout << "TALLA: " << talla << endl;
+		cout << "DISPONIBILIDAD: " << letra << endl;
+		cout << "CANTIDAD DE ZAPATOS: " << qzapato << endl;
+		cout << "COSTO UNIDAD: " << costou << endl;
+		cout << "COSTO TOTAL: " << costot << endl;
+		cout << "PRECIO UNIDAD: " << pventa << endl;
+		cout << "PRECIO TOTAL DE " << qzapato << " UNIDADES: " << pventat << endl;
+		cout << "UTILIDAD POR UNIDAD: " << utilidadu << endl;
+		cout << "UTILIDAD TOTAL: " << utilidadt << endl;
+		cout << "PORCENTAJE DE UTILIDAD: " << porcentajeu << endl;
 
-	cout << "LOS DATOS REGISTRADOS SON LOS SIGUIENTES" << endl;
-	// salida final de datos organizados
-	cout << "REFERENCIA: " << referencia << endl;
-	cout << "DESCRIPCION: " << descripcion << endl;
-	cout << "TALLA: " << talla << endl;
-	cout << "DISPONIBILIDAD: " << letra << endl;
-	cout << "CANTIDAD DE ZAPATOS: " << qzapato << endl;
-	cout << "COSTO UNIDAD: " << costou << endl;
-	cout << "COSTO TOTAL: " << costot << endl;
-	cout << "PRECIO UNIDAD: " << pventa << endl;
-	cout << "PRECIO TOTAL DE " << qzapato << " UNIDADES: " << pventat<< endl;
-	cout << "UTILIDAD POR UNIDAD: " << utilidadu << endl;
-	cout << "UTILIDAD TOTAL: " << utilidadt << endl;
-	cout << "PORCENTAJE DE UTILIDAD: " << porcentajeu << endl;
-
-	cout << "Gracias por digitar la informacion" << endl;
+		cout << "Gracias por digitar la informacion" << endl;
+		cout << "Diego Ardila Gomez" << endl;
+	}
+    cout << "Gracias por digitar la informacion" << endl;
 	cout << "Diego Ardila Gomez" << endl;
 }
 
